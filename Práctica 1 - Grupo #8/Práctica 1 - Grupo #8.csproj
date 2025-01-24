@@ -7,4 +7,11 @@
     <RootNamespace>Práctica_1___Grupo__8</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="wwwroot\scss\**" />
+    <Content Remove="wwwroot\scss\**" />
+    <EmbeddedResource Remove="wwwroot\scss\**" />
+    <None Remove="wwwroot\scss\**" />
+  </ItemGroup>
+
 </Project>

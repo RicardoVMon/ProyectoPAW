@@ -2,7 +2,7 @@
     Layout = "~/Views/Shared/_LayoutExterno.cshtml";
 }
 <div class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-dark navbar-extend p-2" style="background-color: #1A2035;">
+    <nav class="navbar navbar-dark navbar-extend p-2" style="background-color: #291410;">
         <div class="container-fluid">
             <a class="navbar-brand fs-4 fw-bold" th:href="">
                 <i class="fa fa-heart mx-2"></i> Donde tu belleza encuentra su mejor versión.
@@ -16,8 +16,8 @@
         <div class="col d-flex align-items-center">
             <div class="container-fluid d-flex flex-column">
                 <form class="pb-4 border-bottom px-5" th:action="" method="POST">
-                    <div class="text-center fw-bold" style="font-size: 10vh; color: #1F283E;">AgendaTuLook</div>
-                    <h2 class="mb-5 text-center" style="color: #1F283E;">Registrarse</h2>
+                    <div class="text-center fw-bold" style="font-size: 10vh; color: #321914;">AgendaTuLook</div>
+                    <h2 class="mb-5 text-center" style="color: #321914;">Registrarse</h2>
 
                     <div class="row g-4">
                         <div class="col-12">
@@ -80,7 +80,7 @@
                     </div>
 
                     <div class="form-group text-center mt-4">
-                        <a href="../User/Home/home.php" class="btn btn-primary btn-lg" style="background-color:#1F283E; border-color: #1F283E;">
+                        <a href="@Url.Action("Index", "Home")" class="btn btn-primary btn-lg" style="background-color:#321914; border-color: #321914;">
                             Registrarse
                         </a>
                         <div class="mt-3">

@@ -9,6 +9,11 @@ namespace Práctica_1___Grupo__8.Controllers
             return View();
         }
 
+        public IActionResult Registro()
+        {
+            return View();
+        }
+
         public IActionResult RecuperarContrasennia()
         {
             return View();

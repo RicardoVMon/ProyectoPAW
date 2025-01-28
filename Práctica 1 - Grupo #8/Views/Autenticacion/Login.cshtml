@@ -2,9 +2,9 @@
     Layout = "~/Views/Shared/_LayoutExterno.cshtml";
 }
 <div class="d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-dark navbar-extend p-2" style="background-color: #1A2035;">
+    <nav class="navbar navbar-dark navbar-extend p-2" style="background-color: #291410;">
         <div class="container-fluid">
-            <a class="navbar-brand fs-4 fw-bold" th:href="">
+            <a class="navbar-brand fs-4 fw-bold">
                 <i class="fa fa-heart mx-2"></i> Donde tu belleza encuentra su mejor versión.
             </a>
         </div>
@@ -15,19 +15,19 @@
         </div>
         <div class="col d-flex align-items-center">
             <div class="container-fluid d-flex flex-column">
-                <form class="pb-5 border-bottom px-5" th:action="" method="POST">
-                    <div class="text-center fw-bold" style="font-size: 10vh; color: #1F283E;">AgendaTuLook</div>
-                    <h2 class="mb-5 text-center" style="color: #1F283E;" th:text="#{login.loginUsuario}">Ingresar</h2>
+                <form class="pb-5 border-bottom px-5" method="POST">
+                    <div class="text-center fw-bold" style="font-size: 10vh; color: #321914;">AgendaTuLook</div>
+                    <h2 class="mb-5 text-center" style="color: #321914;">Ingresar</h2>
                     <div class="form-group form-floating mb-4">
                         <input type="text" class="form-control" placeholder="Cédula" name="Cédula" id="Cédula" />
-                        <label class="form-label" th:text="#{login.username}">Cédula</label>
+                        <label class="form-label">Cédula</label>
                     </div>
                     <div class="form-group form-floating mb-4">
                         <input type="password" class="form-control" placeholder="Contraseña" name="password" id="password" />
-                        <label class="form-label" th:text="#{login.password}">Contraseña</label>
+                        <label class="form-label">Contraseña</label>
                     </div>
                     <div class="form-group text-center">
-                        <a href="../User/Home/home.php" class="btn btn-primary btn-lg" style="background-color:#1F283E; border-color: #1F283E;" th:text="#{login.inicioSesion}">
+                        <a href="@Url.Action("Index", "Home")" class="btn btn-primary btn-lg" style="background-color:#321914; border-color: #1F283E;">
                             Iniciar Sesión
                         </a>             
                         <div class="mt-3">
@@ -35,7 +35,7 @@
                         </div>
                     </div>
                 </form>
-                <a href="@Url.Action("Registro", "Autenticacion")" class="mt-4 text-center under" th:text="#{login.registrarse}">¿No tenés Cuenta? <br> ¡Crea una ya! </a>
+                <a href="@Url.Action("Registro", "Autenticacion")" class="mt-4 text-center under">¿No tenés Cuenta? <br> ¡Crea una ya! </a>
             </div>
         </div>
     </section>

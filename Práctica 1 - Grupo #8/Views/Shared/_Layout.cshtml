@@ -7,6 +7,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<title>AgendaTuLook</title>
 	<link href="~/css/app.css" rel="stylesheet" />
+	<link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
 	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
@@ -15,8 +16,8 @@
 	<div class="wrapper">
 		<nav id="sidebar" class="sidebar js-sidebar">
 			<div class="sidebar-content js-simplebar">
-                <a class="sidebar-brand pb-0" href="index.html">
-                    <span class="align-middle text-white fw-bold fs-1" style="font-family: 'Cursive', sans-serif;">AgendaTuLook</span>
+                <a class="sidebar-brand pb-0 text-decoration-none" href="#">
+                    <span class="align-middle text-white fw-bold fs-3">AgendaTuLook</span>
                 </a>
 
                 <ul class="sidebar-nav">
@@ -169,8 +170,10 @@
 								<i class="align-middle" data-feather="settings"></i>
 							</a>
 
-							<a class="nav-link dropdown-toggle d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
-								<img src="https://st3.depositphotos.com/9998432/13335/v/450/depositphotos_133352010-stock-illustration-default-placeholder-man-and-woman.jpg" class="avatar img-fluid rounded me-1" /> <span class="text-dark">Usuario</span>
+							<a class="nav-link d-none d-sm-inline-block" href="#" data-bs-toggle="dropdown">
+                                <img src="https://st3.depositphotos.com/9998432/13335/v/450/depositphotos_133352010-stock-illustration-default-placeholder-man-and-woman.jpg" class="avatar img-fluid rounded me-1" /> 
+                                <span class="text-dark">Usuario</span>
+                                <i class="align-middle fas fa-chevron-down"></i>
 							</a>
 							<div class="dropdown-menu dropdown-menu-end">
                                 <a class="dropdown-item"><i class="align-middle me-1 fas fa-cog"></i> Ajustes</a>

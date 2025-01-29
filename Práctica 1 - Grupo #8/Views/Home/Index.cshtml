@@ -1,1 +1,62 @@
 ﻿<h1 class="display-4">Hola</h1>
+<h1>Registro y Login</h1>
+
+<!-- Formulario de Registro -->
+<h2>Registro</h2>
+<form id="registerForm">
+    <input type="email" id="registerEmail" placeholder="Email" required>
+    <input type="password" id="registerPassword" placeholder="Contraseña" required>
+    <button type="submit">Registrarse</button>
+</form>
+
+<!-- Formulario de Login -->
+<h2>Login</h2>
+<form id="loginForm">
+    <input type="email" id="loginEmail" placeholder="Email" required>
+    <input type="password" id="loginPassword" placeholder="Contraseña" required>
+    <button type="submit">Iniciar Sesión</button>
+</form>
+
+<script>
+    let token = null;
+
+    // Registro de usuario
+    document.getElementById('registerForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('registerEmail').value;
+        const password = document.getElementById('registerPassword').value;
+
+        const response = await fetch('/identity/register', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password })
+        });
+
+        if (response.ok) {
+            alert('Usuario registrado correctamente');
+        } else {
+            alert('Error en el registro');
+        }
+    });
+
+    // Inicio de sesión
+    document.getElementById('loginForm').addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const email = document.getElementById('loginEmail').value;
+        const password = document.getElementById('loginPassword').value;
+
+        const response = await fetch('/identity/login', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email, password })
+        });
+
+        if (response.ok) {
+            const data = await response.json();
+            token = data.token; // Guardar el token
+            alert('Inicio de sesión exitoso');
+        } else {
+            alert('Error en el inicio de sesión');
+        }
+    });
+</script>
